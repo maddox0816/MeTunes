@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeTunes</title>
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAArJJREFUaEPtmj9v1DAYxh8nFaKdUQWFInYkJJDowIAEDEhsHRiQWsFQxMDUctvBDceVAV2vDCxIDAyVGNmYurRLhYBPAS0fAIRUqG3kU3PkfHbyJnEuySlZ43+/53lf27HDQHy67SNJLOq0WKM1xSgNRhbqdX6fFeLEd0pDeZfxvD/n1p7O7Nv6sYIU5UCcIDaHjCBlhQggTTAaiGTdNhdxqpThfaPlewAb5O0QSNmd0AUMOzMAqRqEHmZ9kDLNTknDNpjN+iBVdSPsChnk8gLDzdseIIGNDk8qXK7lVa6wbvtIjcqL6+nJM99Y5M0rjl8/42rn/l4oENLWwwYSHqIUQG+9GLecgui6bzwfH1QikPDAKA4psHHBpAYJq3/1GsP1W+Y0ywNEiai36wRED6mwW5UGUWAnp4HHjVHlXMxfY3OkBiHaVTuihDKpECVgnSOE8KpDq9Khtdb0wbTFOsniVniORO2hKgMSBbGzLfFlj37AUqgjrtwofGW3gVBCyvOA1eboVySlbtyMOzfPcO/BcMJG7n6vLDDcUN/lx8/utsDnvfgPSJdORu2kw+96HQ4ZGhp5G29TLQri/TuOg29xetvfJxEoV5CsYVUKkKwQwSJs8svUdmZH9A5dAASDnz3NsPzwf85Gte0EJH0WuKtZg7jT0k1LuTuytOJj623yg7o7ix4+fqBviXIH0ScDwYHNF6Ng5y8w3F2mJbbJQ9Zt/5UA6QY4UwxQTyZTnk4K8rVCJorjyvcf+Tg1a2/p9UuOw8PkPfWvFVQ16ol88i7sNaZngIuXGL5+kkN7pjR9DEAm5uqtKFfSqK/XCW52J+96OiAtIl/SOKP//WCYd8v/94P+14MSYrJ/qgms3lyXZzjnB2msd13H9/251Sb7YWuXvKRTr7EdA4hGa8p8L6519A8iIaZMh8JbGgAAAABJRU5ErkJggg==">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js" integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<!-- list music-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- center div -->
+            <br>
+            <div class="d-flex align-items-center justify-content-center">
+                <svg viewBox="0 0 330 82" height="82" width="330" ><defs id="SvgjsDefs1046"></defs><g id="SvgjsG1047" featurekey="symbolContainer" transform="matrix(1,0,0,1,0,0)" fill="#8c82fc"><rect width="110" height="82" rx="8"></rect></g><g id="SvgjsG1048" featurekey="symbolFeature-0" transform="matrix(1.0870560446924409,0,0,1.0870560446924409,12.615332589122804,-3.843622071537098)" fill="#ffffff"><g xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M36,22l-15.5-4.5c-1.5-0.6-3.2,0.5-3.2,2.2V22L38,28v-4C38,23,36.9,22.3,36,22z"></path></g><g xmlns="http://www.w3.org/2000/svg"><g><path fill="#ffffff" d="M18,40.9c1,1.9-0.7,4.7-3.7,6.2c-3,1.6-6.2,1.3-7.2-0.6s0.5-5.1,3.7-6.2C14.2,39.2,17.1,39,18,40.9z"></path></g><g><rect x="17" y="20" fill="#ffffff" width="2" height="22"></rect></g></g><g xmlns="http://www.w3.org/2000/svg"><g><path fill="#ffffff" d="M37.2,46.6c1,1.9-0.7,4.7-3.7,6.2c-3,1.6-6.2,1.3-7.2-0.6c-1-1.9,0.5-5.1,3.7-6.2    C33.4,44.9,36.2,44.7,37.2,46.6z"></path></g><g><rect x="36" y="24" fill="#ffffff" width="2" height="23"></rect></g></g><g xmlns="http://www.w3.org/2000/svg"><g><path fill="#ffffff" d="M70.9,46.6c1,1.9-0.7,4.7-3.7,6.2c-3,1.6-6.2,1.3-7.2-0.6c-1-1.9,0.5-5.1,3.7-6.2    C67,44.9,69.9,44.7,70.9,46.6z"></path></g><g><rect x="69" y="24" fill="#ffffff" width="2" height="23"></rect></g></g><g xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M38,59c0,0,0.4,0.1,1.1,0.2c0.3,0.1,0.7,0.2,1.2,0.3c0.5,0.1,0.9,0.2,1.5,0.4c0.5,0.2,1.1,0.2,1.7,0.4   c0.6,0.2,1.2,0.2,1.8,0.4c0.6,0.1,1.3,0.2,1.9,0.3c0.3,0,0.6,0,1,0.1l1,0c0.3,0,0.6,0,1,0c0.3,0,0.6,0,1-0.1c0.3,0,0.6,0,1-0.1   c0.3,0,0.6-0.1,0.9-0.1c0.6-0.1,1.2-0.2,1.8-0.4c0.6-0.1,1.1-0.3,1.7-0.4c1.1-0.3,2-0.5,2.6-0.7C59.6,59.1,60,59,60,59   s-0.2,0.4-0.6,0.9c-0.4,0.6-1.1,1.3-2,2.1c-0.5,0.4-1,0.8-1.6,1.1c-0.6,0.4-1.3,0.7-2,1c-0.7,0.3-1.5,0.5-2.3,0.7   c-0.4,0.1-0.8,0.1-1.2,0.2c-0.4,0-0.8,0.1-1.3,0.1L47.7,65c-0.4-0.1-0.8-0.1-1.2-0.2c-0.4-0.1-0.8-0.2-1.2-0.3   c-0.4-0.1-0.8-0.2-1.1-0.4c-0.7-0.3-1.4-0.6-2-1c-0.6-0.4-1.1-0.7-1.6-1.1c-0.5-0.4-0.9-0.8-1.2-1.1c-0.3-0.3-0.6-0.7-0.8-1   C38.2,59.3,38,59,38,59z"></path></g></g><g id="SvgjsG1049" featurekey="nameFeature-0" transform="matrix(1.1555352042309206,0,0,1.1555352042309206,125.84007337496911,11.318464107589467)" fill="#8c82fc"><path d="M3.6 37.8 l0 -23.48 c0 -1.36 1.08 -2.48 2.48 -2.48 l0.52 0 c1.08 0 1.8 0.56 2.28 1.32 l8.48 13.28 l8.52 -13.32 c0.52 -0.84 1.24 -1.28 2.24 -1.28 l0.52 0 c1.4 0 2.48 1.12 2.48 2.48 l0 23.44 c0 1.36 -1.08 2.44 -2.48 2.44 c-1.32 0 -2.44 -1.12 -2.44 -2.44 l0 -16.8 l-6.84 10.28 c-0.52 0.8 -1.16 1.28 -2.08 1.28 c-0.88 0 -1.52 -0.48 -2.04 -1.28 l-6.8 -10.2 l0 16.76 c0 1.36 -1.08 2.4 -2.44 2.4 s-2.4 -1.04 -2.4 -2.4 z M41.4 27.96 l10.84 0 c-0.32 -3.12 -2.16 -5.56 -5.36 -5.56 c-2.96 0 -5.04 2.28 -5.48 5.56 z M55.04 37.68 c-1.92 1.72 -4.32 2.8 -7.6 2.8 c-6.12 0 -10.84 -4.44 -10.84 -10.96 l0 -0.08 c0 -6.04 4.28 -11 10.32 -11 c6.72 0 10.04 5.52 10.04 10.4 c0 1.36 -1.04 2.32 -2.28 2.32 l-13.24 0 c0.52 3.44 2.96 5.36 6.08 5.36 c2.04 0 3.64 -0.72 5 -1.84 c0.36 -0.28 0.68 -0.44 1.24 -0.44 c1.08 0 1.92 0.84 1.92 1.96 c0 0.6 -0.28 1.12 -0.64 1.48 z M69.36 37.76 l0 -21.2 l-6.8 0 c-1.28 0 -2.28 -1.04 -2.28 -2.28 s1 -2.28 2.28 -2.28 l18.6 0 c1.24 0 2.24 1.04 2.24 2.28 s-1 2.28 -2.24 2.28 l-6.84 0 l0 21.2 c0 1.36 -1.12 2.44 -2.48 2.44 s-2.48 -1.08 -2.48 -2.44 z M106.6 21.08 l0 16.72 c0 1.32 -1.08 2.4 -2.44 2.4 c-1.32 0 -2.44 -1.04 -2.44 -2.4 l0 -1.08 c-1.36 2 -3.32 3.72 -6.6 3.72 c-4.76 0 -7.52 -3.2 -7.52 -8.12 l0 -11.24 c0 -1.36 1.08 -2.44 2.4 -2.44 c1.36 0 2.44 1.08 2.44 2.44 l0 9.8 c0 3.28 1.64 5.12 4.52 5.12 c2.8 0 4.76 -1.92 4.76 -5.2 l0 -9.72 c0 -1.36 1.08 -2.44 2.44 -2.44 c1.32 0 2.44 1.08 2.44 2.44 z M112.64 37.8 l0 -16.72 c0 -1.36 1.04 -2.44 2.4 -2.44 s2.44 1.08 2.44 2.44 l0 1.04 c1.36 -1.96 3.32 -3.68 6.6 -3.68 c4.76 0 7.52 3.2 7.52 8.08 l0 11.28 c0 1.36 -1.04 2.4 -2.4 2.4 s-2.44 -1.04 -2.44 -2.4 l0 -9.8 c0 -3.28 -1.64 -5.16 -4.52 -5.16 c-2.8 0 -4.76 1.96 -4.76 5.24 l0 9.72 c0 1.36 -1.08 2.4 -2.44 2.4 c-1.32 0 -2.4 -1.04 -2.4 -2.4 z M141.08 27.96 l10.84 0 c-0.32 -3.12 -2.16 -5.56 -5.36 -5.56 c-2.96 0 -5.04 2.28 -5.48 5.56 z M154.72 37.68 c-1.92 1.72 -4.32 2.8 -7.6 2.8 c-6.12 0 -10.84 -4.44 -10.84 -10.96 l0 -0.08 c0 -6.04 4.28 -11 10.32 -11 c6.72 0 10.04 5.52 10.04 10.4 c0 1.36 -1.04 2.32 -2.28 2.32 l-13.24 0 c0.52 3.44 2.96 5.36 6.08 5.36 c2.04 0 3.64 -0.72 5 -1.84 c0.36 -0.28 0.68 -0.44 1.24 -0.44 c1.08 0 1.92 0.84 1.92 1.96 c0 0.6 -0.28 1.12 -0.64 1.48 z M168.84 40.4 c-2.68 0 -5.6 -0.84 -8.04 -2.52 c-0.52 -0.28 -0.92 -0.88 -0.92 -1.68 c0 -1.08 0.84 -1.96 1.96 -1.96 c0.4 0 0.76 0.12 1.04 0.28 c2.04 1.36 4.16 2.04 6.08 2.04 c2.08 0 3.28 -0.88 3.28 -2.28 l0 -0.08 c0 -1.64 -2.24 -2.2 -4.72 -2.96 c-3.12 -0.88 -6.6 -2.16 -6.6 -6.2 l0 -0.08 c0 -4 3.32 -6.44 7.52 -6.44 c2.24 0 4.6 0.64 6.64 1.72 c0.68 0.36 1.16 1 1.16 1.84 c0 1.12 -0.88 1.96 -2 1.96 c-0.4 0 -0.64 -0.08 -0.96 -0.24 c-1.72 -0.88 -3.48 -1.44 -4.96 -1.44 c-1.88 0 -2.96 0.88 -2.96 2.08 l0 0.08 c0 1.56 2.28 2.2 4.76 3 c3.08 0.96 6.56 2.36 6.56 6.16 l0 0.08 c0 4.44 -3.44 6.64 -7.84 6.64 z"></path></g></svg>
+            </div>
+            <br>
+        </div>
+    </div>
+</div> 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Search Music</h5>
+                    <p class="card-text">
+                        <input type="text" class="form-control" name="search_local" id="search_local" placeholder="Search for...">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $('#search_local').keyup(function () {
+            var filter = $(this).val();
+            $('#music-list tbody tr').each(function () {
+                if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+                    $(this).fadeOut();
+                } else {
+                    $(this).fadeIn();
+                }
+            });
+        });
+    });
+
+            
+
+</script>
+
+
+
+
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Music</h5>
+                    <table class="table table-sm" id="music-list">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="d-none">#</th>
+                                <th scope="col">Album</th>
+                                <th scope="col" >Title</th>
+                                <th scope="col" class="hidden-header">Artist</th>
+                                <th scope="col" class="hidden-header">Released</th>
+                                <th scope="col">Action</th>
+                            </tr>
+
+                        </thead>
+                        {% for item in songs %}
+                        <tbody>
+                            <th scope="row" class="d-none">{{item.id}}</th>
+                            <td><img src="{{item.image}}" width="50px" height="50px"></td>
+                            <td style="display: table-cell !important">{{ item.title }}</td>
+                            <td class="hidden-info">{{ item.artist}}</td>
+                            <td class="hidden-info">{{item.time}}</td>
+                            <td><button song_title = "{{item.title}}" song_artist = "{{item.artist}}" song_url = "{{ item.file }}" image_url="{{item.image}}" type="button" class="btn btn-primary playmusicbutton" style="background-color: #8C82FC; border-color: 8C82FC;">Play</button></td>
+                        </tbody>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<audio id="audioPlayer" style="display: none;"></audio>
+<!-- square that hovers in the corner that has a play and pause button to control the audio-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 id="songTitle"></h5>
+                    <!--album cover-->
+                    <img id="albumCover" src="" width="100px" height="100px">
+                    <p id="currentTime" class="card-text">00:00</p>
+                    <div class="progress">
+                        <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="background-color: #8C82FC; border-color: 8C82FC;"></div>
+                    </div>
+                    <br>
+                    <!--   play pause button -->
+                   <button id="playPause" type="button" class="btn btn-primary" style="background-color: #8C82FC; border-color: 8C82FC;"><span id="playPauseIcon" class="fa fa-play"></span></button>                
+                    <br>
+                    <!--center canvas horizontally-->
+                    <div class="mx-auto">
+                        <canvas id="canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Find more music</h5>
+                    <p class="card-text">
+                        <form action="/search" method="POST">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="search_term" placeholder="Search for...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-secondary" type="submit" style="background-color: #b1aaff; border-color: #b1aaff;">Go!</button>
+                                </span>
+                            </div>
+                        </form>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <p>MeTunes is copyright © by Karinna. For legal purposes this is legally different because the logo is purple.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<style>
+  #canvas {
+    position: relative;
+    width: 100%;
+  }
+
+  body{
+      background-color: #C4BEF7;
+  }
+
+  @media screen and (max-width: 768px) {
+    .hidden-info {
+        display: none;
+    }
+    .hidden-header {
+        display: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .hidden-info {
+        display: table-cell !important;
+    }
+    .hidden-header {
+        display: table-cell !important;
+    }
+  }
+  </style>
+
+
+<script>
+     window.onload = function() {
+const canvas = document.getElementById("canvas");
+const audio = document.getElementById("audioPlayer");
+
+document.onclick= function(event) {
+
+
+
+  ///////// <CANVAS> INITIALIZATION //////////
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight / 2;
+  const ctx = canvas.getContext("2d");
+  ///////////////////////////////////////////
+
+    
+
+  const context = new AudioContext(); // (Interface) Audio-processing graph
+  let src = context.createMediaElementSource(audio); // Give the audio context an audio source,
+  // to which can then be played and manipulated
+  const analyser = context.createAnalyser(); // Create an analyser for the audio context
+
+  src.connect(analyser); // Connects the audio context source to the analyser
+  analyser.connect(context.destination); // End destination of an audio graph in a given context
+  // Sends sound to the speakers or headphones
+
+
+  /////////////// ANALYSER FFTSIZE ////////////////////////
+   //analyser.fftSize = 32;
+  // analyser.fftSize = 64;
+  // analyser.fftSize = 128;
+  // analyser.fftSize = 256;
+  // analyser.fftSize = 512;
+  //analyser.fftSize = 1024;
+  // analyser.fftSize = 2048;
+  // analyser.fftSize = 4096;
+  // analyser.fftSize = 8192;
+  analyser.fftSize = 16384;
+   //analyser.fftSize = 32768;
+
+  // (FFT) is an algorithm that samples a signal over a period of time
+  // and divides it into its frequency components (single sinusoidal oscillations).
+  // It separates the mixed signals and shows what frequency is a violent vibration.
+
+  // (FFTSize) represents the window size in samples that is used when performing a FFT
+
+  // Lower the size, the less bars (but wider in size)
+  ///////////////////////////////////////////////////////////
+
+
+  const bufferLength = analyser.frequencyBinCount; // (read-only property)
+  // Unsigned integer, half of fftSize (so in this case, bufferLength = 8192)
+  // Equates to number of data values you have to play with for the visualization
+
+  // The FFT size defines the number of bins used for dividing the window into equal strips, or bins.
+  // Hence, a bin is a spectrum sample, and defines the frequency resolution of the window.
+
+  const dataArray = new Uint8Array(bufferLength); // Converts to 8-bit unsigned integer array
+  // At this point dataArray is an array with length of bufferLength but no values
+  console.log('DATA-ARRAY: ', dataArray) // Check out this array of frequency values!
+
+  var WIDTH = canvas.width;
+  var HEIGHT = canvas.height;
+  console.log('WIDTH: ', WIDTH, 'HEIGHT: ', HEIGHT)
+
+  var barWidth = WIDTH/118
+  console.log('BARWIDTH: ', barWidth)
+
+  console.log('TOTAL WIDTH: ', (118*barWidth)) // (total space between bars)+(total width of all bars)
+
+  let x = 0;
+
+  function renderFrame() {
+    WIDTH = canvas.width;
+    HEIGHT = canvas.height;
+    barWidth = WIDTH/118;
+    requestAnimationFrame(renderFrame); // Takes callback function to invoke before rendering
+
+    x = 0;
+
+    analyser.getByteFrequencyData(dataArray); // Copies the frequency data into dataArray
+    // Results in a normalized array of values between 0 and 255
+    // Before this step, dataArray's values are all zeros (but with length of 8192)
+
+    ctx.fillStyle = "rgba(255,255,255,0.2)"; // Clears canvas before rendering bars (black with opacity 0.2)
+    ctx.fillRect(0, 0, WIDTH, HEIGHT); // Fade effect, set opacity to 1 for sharper rendering of bars
+
+    let r, g, b;
+    let bars = 118 // Set total number of bars you want per frame
+
+    for (let i = 0; i < bars; i++) {
+      barHeight = (dataArray[i] * 2.5) / 2;
+
+      if (dataArray[i] > 250){ // pink
+        r = 140
+        g = 130
+        b = 252
+      } else if (dataArray[i] > 200){ // yellow
+        r = 150
+        g = 141
+        b = 247
+      } else if (dataArray[i] > 190){ // yellow/green
+        r = 163
+        g = 156
+        b = 247
+      } else if (dataArray[i] > 180){ // blue/green
+        r = 176
+        g = 169
+        b = 252
+      } else { // light blue
+        r = 188
+        g = 182
+        b = 2252
+      }
+
+      // if (i === 0){
+      //   console.log(dataArray[i])
+      // }
+
+      ctx.fillStyle = `rgb(${r},${g},${b})`;
+      ctx.fillRect(x, (HEIGHT - barHeight), barWidth, barHeight);
+      // (x, y, i, j)
+      // (x, y) Represents start point
+      // (i, j) Represents end point
+
+      x += barWidth + 0 // Gives 10px space between each bar
+    }
+  }
+
+  audio.play();
+  renderFrame();
+};
+};
+</script>
+
+
+
+
+
+
+                
+<script>
+$(".playmusicbutton").click(function(){
+    $(".playmusicbutton").fadeIn(500);
+    var file_name = $(this).attr("song_url");
+    var song_title = $(this).attr("song_title");
+    var song_artist = $(this).attr("song_artist");
+    trackUrl = "static/" + file_name;
+    $("#songTitle").html(song_title + " - " + song_artist);
+    $("#audioPlayer").attr("src", "static/" + file_name);
+    var image_url = $(this).attr("image_url");
+    console.log(image_url);
+    $("#albumCover").attr("src",  image_url);
+
+
+    $("#audioPlayer").trigger("play");
+    $(this).fadeOut(500);
+});
+
+
+$("#playPause").click(function(){
+    if($("#playPauseIcon").hasClass("fa-play")){
+        $("#playPauseIcon").removeClass("fa-play");
+        $("#playPauseIcon").addClass("fa-pause");
+        $("#audioPlayer").trigger("play");
+    }else{
+        $("#playPauseIcon").removeClass("fa-pause");
+        $("#playPauseIcon").addClass("fa-play");
+        $("#audioPlayer").trigger("pause");
+    }
+});
+
+$("#audioPlayer").bind("timeupdate", function(){
+    var currentTime = $("#audioPlayer")[0].currentTime;
+    var duration = $("#audioPlayer")[0].duration;
+    var progress = (currentTime / duration) * 100;
+    $("#progressBar").css("width", progress + "%");
+
+    //check if audio is playing
+    if($("#audioPlayer")[0].paused){
+        $("#playPauseIcon").removeClass("fa-pause");
+        $("#playPauseIcon").addClass("fa-play");
+    }else{
+        $("#playPauseIcon").removeClass("fa-play");
+        $("#playPauseIcon").addClass("fa-pause");
+    }
+   
+    currentTime = parseInt(currentTime);
+    var minutes = parseInt(currentTime / 60);
+    var seconds = currentTime % 60;
+    if(seconds < 10){
+        seconds = "0" + seconds;
+    }
+    currentTime = minutes + ":" + seconds;
+    console.log(currentTime);
+    $("#currentTime").text(currentTime);
+
+
+});
+
+</script>
+
+</body>
+
+    </html>
