@@ -43,8 +43,11 @@ def search():
     search_term = request.form.get('search_term') + " lyric video"
 
     print(search_term)
+    
+    #get best audio and rename the file to just its id
     ydl_opts = {
         'format': 'bestaudio/best',
+        'outtmpl': '%(id)s.%(ext)s',
     }
     
     #search for song on youtube
@@ -63,15 +66,15 @@ def search():
         )
 
         #file full name
-        file_name = result['title'] + "-" + results[0]['id'] +  "." + result['ext']
+        file_name = results[0]['id'] +  "." + result['ext']
         #check if file already exists
         if os.path.isfile("static/" + file_name):
             print("file already exists")
         else:
-            #download song
+            #download song 
             ydl.download([url_to_download])
-            #move file to static folder
-            os.rename(file_name, "static/" + file_name)
+
+            
             #add file to list
 
             #get song details from spotify
@@ -79,6 +82,10 @@ def search():
 
             file = open("songs list", "a")
             file.write(file_name + "|:|" + song_title + "|:|" + song_artist + "|:|" + release_date + "|:|" + album_image_url + "\n")
+            file.close()
+
+            #move file to static folder
+            os.rename(file_name, "static/" + file_name)
 
     return redirect(url_for('index'))
         
