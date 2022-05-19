@@ -139,21 +139,73 @@
                 <div class="card-body">
                     <h5 class="card-title">Find more music</h5>
                     <p class="card-text">
-                        <form action="/search" method="POST">
-                            <div class="input-group">
-                                <input type="text" class="form-control" name="search_term" placeholder="Search for...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-secondary" type="submit" style="background-color: #b1aaff; border-color: #b1aaff;">Go!</button>
-                                </span>
-                            </div>
-                        </form>
+                        <div class="input-group" id="downloadinputgroup">
+                            <input type="text" id="downloadsearch" class="form-control" name="search_term" placeholder="Search for...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-secondary" id="downloadbutton" type="submit" style="background-color: #b1aaff; border-color: #b1aaff;">Go!</button>
+                            </span>
+                        </div>
+                        <!-- status of download-->
+                        <br>
+                        <div id="downloadStatus"></div>
                     </p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<script>
+$(document).ready(function(){
+    $('#downloadbutton').click(function(){
+        var searchTerm = $('#downloadsearch').val();
+        $.ajax({
+            url: '/api/search',
+            type: 'POST',
+            data: {
+                'search_term': searchTerm
+            },
+            success: function(data){
+                $('#downloadStatus').html("Downloading...");
+                var song_id = data;
+                console.log(song_id);
+                $.ajax({
+                    url: '/api/download-song',
+                    type: 'POST',
+                    data: {
+                        'songid': song_id
+                    },
+                });
+                $('#downloadinputgroup').hide();
+                setInterval(function(){
+                    $.ajax({
+                        url: '/api/download-status',
+                        type: 'POST',
+                        data: {
+                            'songid': song_id
+                        },
+                        success: function(data){
+                            $('#downloadStatus').html(data);
+                            if("Downloaded!" in data){
+                                clearInterval(this);
+                            }
 
+                        }
+                    });
+                }, 1000);
+            }
+        });
+    });
+    $(document).on("keypress",'#downloadsearch',function(e){
+        if(e.which == 13){
+            $('#downloadbutton').click();
+        }
+    });
+});
+
+
+
+
+</script>
 <br>
 
 <div class="container">
