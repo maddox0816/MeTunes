@@ -185,7 +185,8 @@ $(document).ready(function(){
                         },
                         success: function(data){
                             $('#downloadStatus').html(data);
-                            if("Downloaded!" in data){
+                            //Check if the text "Downloaded" is in the data
+                            if(data.includes("Downloaded")){
                                 clearInterval(this);
                             }
 
@@ -410,6 +411,9 @@ $(".playmusicbutton").click(function(){
 
     $("#audioPlayer").trigger("play");
     $(this).fadeOut(500);
+    $("body, html").animate({
+        scrollTop: $("#songTitle").offset().top
+    }, 500);
 });
 
 
