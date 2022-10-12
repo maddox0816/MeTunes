@@ -200,8 +200,18 @@ def image_proxy():
     image_url = request.args.get('image_url')
     print(image_url)
     if "https://i.scdn.co" in image_url:
-        image = requests.get(image_url)
-        return (image.content, 200, {'Content-Type': 'image/jpeg'})
+        #check if file cached and if not cache it
+        if os.path.isfile("static/images/" + image_url.split("/")[-1]):
+            print("file already exists")
+            image = open("static/images/" + image_url.split("/")[-1], "rb")
+            image = image.read()
+            return(image, 200, {'Content-Type': 'image/jpeg'})
+        else:
+            image = requests.get(image_url)
+            open("static/images/" + image_url.split("/")[-1], 'wb').write(image.content)
+            return (image.content, 200, {'Content-Type': 'image/jpeg'})
+        
+
     else:
         return None
 

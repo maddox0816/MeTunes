@@ -7,7 +7,7 @@ def get_song_details(search_term):
         "type": "track",
         "limit": 1
     }
-    OAuthToken = "BQBtqJfbiXY2CRAShMTkhIYVWzUKV0JnQpKkh8FDBHg-qMNiE2BRvGyCufv1OfHScT6uxD91tGrMRQv9SvKniWWrnslxR0M4USHVbYjbygBTHd0t-2V1KyhAXbp3K1np5wIYM9ho2ORX6vLMvnAF1ryRmkUc0wOHAMo"
+    OAuthToken = "BQBwkG5ndc_LP0U-F3h27i-lRybPRjii4XUAew9vFW8svQjjpcBoyvSdrnWP_7QcdJ_7cXPWe1w9OWghEQ0QjhfVxMWw5FSaDCiwn7VfpChsZzdRjmOZq_oYUI2dgkTFLSHRVzIH4vLHhxqxo0aV4ZpMndJui067-1JX9J37XHEtu9nK410Pi7fs8REk6ShCdXM"
 
     headers = {
         "Authorization": "Bearer " + OAuthToken
